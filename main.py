@@ -5,6 +5,9 @@ import logging
 from typing import Dict
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from langgraph.graph import StateGraph, START
 
 from agents.attraction_agent import AttractionAgent
@@ -14,9 +17,9 @@ from agents.weather_agent import WeatherAgent
 from states import TravelInfo
 
 # 环境变量配置
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai-hk.com/v1")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "openai:gpt-3.5-turbo")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")    # openai密钥
+OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai-hk.com/v1")  # openai第三方服务器地址
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "openai:gpt-3.5-turbo")  # openai模型版本
 
 # 日志配置
 logging.basicConfig(

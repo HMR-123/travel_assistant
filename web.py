@@ -1,5 +1,6 @@
-# 导入库
-# Streamlit的前端Web前端界面
+from dotenv import load_dotenv
+load_dotenv()
+
 import streamlit as st
 import asyncio
 import json
