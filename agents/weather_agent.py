@@ -21,7 +21,7 @@ class WeatherAgent(OpenAIBaseAgent):
 
     # WeatherAgent: 使用真实的天气API（聚合数据）获取天气预报。
     # 使用环境变量 WEATHER_API_KEY，如果未设置则使用默认密钥。
-    DEFAULT_API_KEY = "5d0d09a7a3c055066382819ab84ca724"   # 聚合数据个人账号的APIKEY密钥(先申请对应数据信息)
+    DEFAULT_API_KEY = ""   # 聚合数据个人账号的APIKEY密钥(先申请对应数据信息)
     BASE_URL = "http://apis.juhe.cn/simpleWeather/query"  # 天气API的URL,必须有,否则会报错(查看对应的官方接口文档即可)
 
 
